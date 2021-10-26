@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  sajansen-website:
+    container_name: sajansen-website
+    image: nginx:1.21.3-alpine
+    restart: unless-stopped
+    build:
+      context: ./..
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - './../public/:/usr/share/nginx/html'
+    ports:
+      - "8080:80"

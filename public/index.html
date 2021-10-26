@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAJansen</title>
+    <meta name="description" content="SAJansen is a single owner software company">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7f7"/>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/defaults.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="menu-wrapper">
+        <div class="menu">
+            <a href="#about">About</a>
+            <span>•</span>
+            <a href="#donate">Donate</a>
+            <span>•</span>
+            <a href="#projects">Projects</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <a class="anchor" id="about"></a>
+        <div class="container intro">
+            <h2>Hi, let me introduce myself,</h2>
+            <p>I'm mainly a software developer with an electrical engineering background. Using my skills to help other
+                people is what I love to do. </p>
+            <p>I believe there is a solution for every problem. That's the main inspiration for most software/products I create.
+                I also like to explore new things and concepts. </p>
+            <p>Besides software, I have knowledge/experience with sound engineering, church technology (sound,
+                projection, streaming), electrical engineering, video creating/editing, and education.</p>
+            <br/>
+            <p>You can get in touch with me through <a href="https://www.linkedin.com/in/samuel-anton-jansen/"
+                                                       target="_blank">LinkedIn</a>.</p>
+        </div>
+
+        <a class="anchor" id="donate"></a>
+        <div class="container donate">
+            <p>Currently, all my software is free and most of them is open source. My projects (see below) are used by
+                hundreds or thousands of people for free. As no profit is made, these projects depend fully on
+                donations. If you want to contribute or show your thanks,
+                please consider donating by buying me a virtual coffee: </p>
+            <a href="https://www.buymeacoffee.com/sajansen"
+               target="_blank"
+               class="donation-link">Buy me a coffee</a>
+        </div>
+
+        <a class="anchor" id="projects"></a>
+        <div class="container projects">
+            <p class="intro">
+                Below I've listed some projects which are publicly available and used. Most other of my projects are not
+                listed as they are private or just not intended for the public.
+            </p>
+
+            <h3>Mobile apps</h3>
+            <div>
+                <x-project name="Hymnbook"
+                           description="Hymnbook (name is not final) is a solution for the struggles of the current solutions for a digital copy of your worship songs. Created using React Native, I'm proud to release my first mobile application aimed to give users that quick and easy experience."
+                           homepage="https://play.google.com/store/apps/details?id=nl.sajansen.hymnbook2"></x-project>
+            </div>
+
+            <h3>Software (open source)</h3>
+            <div>
+                <x-project name="OBS Scene Timer"
+                           description="OBS Scene Timer is a basic application with one job: let you know how long your OBS (media) scenes will be. This application is a stand-alone Kotlin runnable/executable with integrated webserver for remote connections."
+                           homepage="https://obsproject.com/forum/resources/obs-scene-timer.920/"
+                           source="https://bitbucket.org/sajansen/obs-scene-timer/"></x-project>
+                <x-project name="OBS Scene Queue"
+                           description="OBS Scene Queue is your extra set of hands helping you to control your OBS stream by creating multi-action queues. This application is a stand-alone Kotlin runnable/executable with integrated webserver for remote connections. Also, the application is set up in such a way that people can create their own (Kotlin/Java) plugins to boost the application abilities."
+                           homepage="https://obsproject.com/forum/resources/obs-scene-queue.969/"
+                           source="https://github.com/sampie777/obs-scene-que"></x-project>
+            </div>
+
+            <h3>Websites</h3>
+            <div>
+                <x-project name="Rehobothkerk Woerden"
+                           description="Rehobothkerk Woerden is a growing church filled with a wide variety of the young and the elder. We created this website using the Django framework and made it a shared project with another church to bundle our powers. "
+                           homepage="https://rehobothkerkwoerden.nl/"></x-project>
+                <x-project name="Hands of Hope 2018"
+                           description="Hands of Hope is a charity organization who went to learn and help the locals in South-Africa. This website is not available anymore, only the groups Facebook page. But the website allowed people to keep track of the groups activities and enroll for some of them. "
+                           homepage="https://www.facebook.com/pages/category/Nonprofit-Organization/Hands-of-Hope-2018-1425342914206850/"></x-project>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>&copy; SAJansen &nbsp;-&nbsp; <a href="https://www.linkedin.com/in/samuel-anton-jansen/" target="_blank">LinkedIn</a></p>
+    </div>
+</div>
+
+
+<script src="js/index.js"></script>
+<script src="js/projects.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRRHWPWTNN"></script>
+<script>
+    if (window.location.hostname !== "localhost") {
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-JRRHWPWTNN');
+    }
+</script>
+</body>
+</html>
