@@ -74,7 +74,7 @@ function releaseMajor {
 }
 
 function pushAndRelease {
-  yarn test || exit 1
+  npm test || exit 1
 
   RELEASE_VERSION=$(sed 's/.*"version": "\(.*\)".*/\1/;t;d' ./package.json)
   echo "Release version: ${RELEASE_VERSION}"
