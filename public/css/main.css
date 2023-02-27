@@ -85,7 +85,8 @@ a.anchor {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 40px;
+    height: 48px;
+    padding: 3px;
     background-color: #1e90ff;
     color: #fff;
     border-radius: 50px;
@@ -96,13 +97,27 @@ a.anchor {
     white-space: nowrap;
 }
 
+.donation-link > .text {
+    padding: 5px 15px;
+}
+
+.donation-link > .spacing {
+    min-width: 30px;
+    display: inline-block;
+    height: 100%;
+}
+
+.donation-link .donate-logo {
+    background-color: #e1e5fc;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.donation-link .buymeacoffe {
+}
+
 .paypal {
-    background-color: #ffc43a;
-    color: #121661;
-    padding: 6px 15px;
-    margin: -10px -15px;
-    margin-left: 7px;
-    border-radius: 50px;
+    padding: 5px;
 }
 
 .footer {
@@ -119,11 +134,4 @@ a.anchor {
 
 .footer a {
     color: #8fc7ff;
-}
-
-.buymeacoffe-image {
-    border-radius: 50%;
-    height: 35px;
-    margin: -10px -15px;
-    margin-left: 10px;
 }
