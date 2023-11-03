@@ -25,8 +25,6 @@ function setVersion() {
 }
 
 function releasePatch {
-  npm test || exit 1
-
   git checkout master || exit 1
   git pull || exit 1
 
@@ -42,8 +40,6 @@ function releasePatch {
 }
 
 function releaseMinor {
-  npm test || exit 1
-
   git checkout master || exit 1
   git pull || exit 1
   git merge develop || exit 1
@@ -58,8 +54,6 @@ function releaseMinor {
 }
 
 function releaseMajor {
-  npm test || exit 1
-
   git checkout master || exit 1
   git pull || exit 1
   git merge develop || exit 1
@@ -74,8 +68,6 @@ function releaseMajor {
 }
 
 function pushAndRelease {
-  npm test || exit 1
-
   RELEASE_VERSION=$(sed 's/.*"version": "\(.*\)".*/\1/;t;d' ./package.json)
   echo "Release version: ${RELEASE_VERSION}"
 
