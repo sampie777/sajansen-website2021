@@ -9,12 +9,29 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: stretch;
           height: 100vh;
           margin: 0;
           font-family: Arial, sans-serif;
           text-align: center;
-          background-color: #f8f1f1; /* Light pastel color */
+          background-color: #bccccf;
+      }
+
+      .content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .container {
+          background-color: #e9f0f1;
+          padding: 50px 30px;
+          box-shadow: 0 2px 8px #0003;
+      }
+
+      h3 {
+          margin: 0
       }
 
       #countdown {
@@ -39,17 +56,15 @@
       }
 
       footer {
-          position: absolute;
-          bottom: 10px;
           font-size: 1rem;
           color: #555;
+          padding: 20px;
       }
   </style>
 </head>
 <body>
-<div
-  style="width: 100%; background-color: #fff8dc">
-  <div>
+<div class="content">
+  <div class="container">
     <h3>Live Stream</h3>
     <h1>Begrafnis van Anton Jansen</h1>
     <div id="countdown">Loading...</div>
@@ -57,7 +72,7 @@
   </div>
 </div>
 
-<footer>For technical issues, contact: +27 797 349 129</footer>
+<footer>For technical issues, contact: <a href="tel:+27797349129">+27 797 349 129</a></footer>
 
 <script>
   const countdownElement = document.getElementById("countdown");
