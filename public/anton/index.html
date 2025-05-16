@@ -89,7 +89,7 @@
       <span id="seconds"></span>
     </div>
 
-    <a id="live-button" href="https://www.youtube.com/live_stream_url" target="_blank">Maak Live Stream oop</a>
+    <a id="live-button" href="#" target="_blank">Maak Live Stream oop</a>
   </div>
 </div>
 
@@ -122,19 +122,19 @@
     const timeDifference = targetDate - now;
 
     if (timeDifference <= 0) {
-      countdownElement.textContent = "The live stream is starting!";
+      countdownElement.textContent = "Die live stream het begin!";
       liveButton.style.display = "inline-block";
     } else if (timeDifference <= 3600000) { // Within 1 hour
-      countdownElement.textContent = "The live stream is about to start!";
+      countdownElement.textContent = "Die live stream gaan nou begin!";
       liveButton.style.display = "inline-block";
     } else {
-      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const days = targetDate.getDate() - now.getDate();
       const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
 
-      daysElement.textContent = `Nog ${days + 1} dae`;
+      daysElement.textContent = days > 1 ? `Nog ${days} dae` : `Nog 1 dag`;
       hoursElement.textContent = `${hours}`;
       minutesElement.textContent = `:${padStart(minutes, 2, "0")}`;
       secondsElement.textContent = `:${padStart(seconds, 2, "0")}`;
