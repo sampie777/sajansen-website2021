@@ -27,8 +27,16 @@ function run {
 
 function build {
   echo Building docker image ${NAME}:${VERSION}
-  docker build -t ${NAME} -f docker/Dockerfile .
-  docker tag ${NAME} ${NAME}:${VERSION}
+
+if [[ -n "${GITHUB_ACTIONS}" ]]; then
+  echo "Running inside a GitHub Actions workflow."
+  docker build -t ${NAME} -f docker/Dockerfile . || exit 1
+else
+  echo "Not running inside a GitHub Actions workflow."
+  docker build -t ${NAME} --platform linux/amd64,linux/arm64 -f docker/Dockerfile . || exit 1
+fi
+
+  docker tag ${NAME} ${NAME}:${VERSION} || exit 1
 }
 
 function push {
