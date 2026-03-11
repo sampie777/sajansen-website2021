@@ -1,7 +1,7 @@
 #!/bin/bash
 NAME="sajansen/sajansen-website2021"
 
-VERSION=$(sed 's/.*"version": "\(.*\)".*/\1/;t;d' ./package.json)
+VERSION=$(sed -n 's/.*"version": *"\([^"]*\)".*/\1/p' ./package.json)
 progname=$(basename $0)
 
 function usage {
